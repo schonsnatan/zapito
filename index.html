@@ -1,14 +1,196 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zapito</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zapito – Seu assistente financeiro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
+      color: #333;
+    }
+
+    /* HEADER */
+    .navbar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.4em;
+      color: #2e7d32;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar nav a {
+      margin-left: 20px;
+      color: #444;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar nav a:hover {
+      color: #2e7d32;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #2e7d32;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .btn {
+      background-color: #2e7d32;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    section.features {
+      background: white;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .footer-cta {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #e8f5e9;
+    }
+
+    .footer-cta h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .footer-cta p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar nav {
+        margin-top: 10px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .card {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER NAVBAR -->
+  <div class="navbar">
+    <a href="#" class="logo">Zapito</a>
+    <nav>
+      <a href="#features">Recursos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <header>
+    <h1>Controle suas finanças com o Zapito</h1>
+    <p>Um assistente financeiro direto no WhatsApp. Fácil, rápido e gratuito.</p>
+    <a href="#" class="btn">Comece Agora – É grátis!</a>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="card">
+      <h3>100% pelo WhatsApp</h3>
+      <p>Sem apps extras. Basta chamar o Zapito no seu zap!</p>
+    </div>
+    <div class="card">
+      <h3>Relatórios e alertas</h3>
+      <p>Receba insights e avisos personalizados dos seus gastos.</p>
+    </div>
+    <div class="card">
+      <h3>Rápido e Inteligente</h3>
+      <p>Zapito aprende com seus hábitos para te ajudar melhor a cada dia.</p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="footer-cta" id="sobre">
+    <h2>Pronto para organizar sua vida financeira?</h2>
+    <p>Fale com o Zapito agora e tenha controle total sem sair do WhatsApp.</p>
+    <a href="#" class="btn">Comece pelo WhatsApp</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contato">
+    &copy; 2025 Zapito. Todos os direitos reservados.
+  </footer>
+
+</body>
 </html>
